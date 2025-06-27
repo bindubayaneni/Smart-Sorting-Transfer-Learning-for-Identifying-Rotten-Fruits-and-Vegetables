@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Sorting - Fruit & Vegetable Health</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blur"></div>
+
+    <header>
+        <div class="logo">SmartSorting</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#predict">Prediction</a>
+            <a href="#help">Help</a>
+            <a href="#about">About Us</a>
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <div class="home-content">
+            <h1>Welcome to Smart Fruit & Veg Health</h1>
+            <p>Ensure your food is always safe and fresh with our intelligent freshness detection tool.</p>
+            <a href="#predict" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="predict" class="section">
+        <div class="card">
+            <h2>Fruit and Vegetable Freshness Detection</h2>
+            <form action="/predict" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" required>
+                <button type="submit">Predict</button>
+            </form>
+            {% if prediction %}
+                <div class="result">
+                    <h3>Prediction: {{ prediction }} (Confidence: {{ confidence }}%)</h3>
+                    <img src="{{ image_path }}" alt="Uploaded Image">
+                </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <section id="help" class="section info">
+        <h2>How to Keep Fruits & Vegetables Fresh</h2>
+        <ul>
+            <li>Store bananas, apples, and tomatoes separately as they emit ethylene gas.</li>
+            <li>Use airtight containers or zip-lock bags to retain freshness.</li>
+            <li>Refrigerate leafy greens with paper towels to absorb moisture.</li>
+            <li>Don't wash produce until you're ready to use it to avoid mold.</li>
+        </ul>
+        <p><strong>Note:</strong> Consuming spoiled fruits or vegetables may lead to food poisoning, gastrointestinal issues, or exposure to harmful mold and bacteria.</p>
+    </section>
+
+    <section id="about" class="section info">
+        <h2>About Us</h2>
+        <p>We are a team of passionate developers working on AI-based food safety solutions. Our Smart Sorting project aims to reduce food waste and enhance health safety using computer vision.</p>
+        <h3>Contact Us</h3>
+        <ul>
+            <li>Email: support@smartsorting.ai</li>
+            <li>Phone: +91 98765 43210</li>
+        </ul>
+    </section>
+
+    <footer>
+        © 2025 Smart Sorting
+    </footer>
+</body>
+</html>

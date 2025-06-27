@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>Detect Rot Before You Buy</h1>
+  <p>Smart Sorting helps you ensure freshness and quality of produce before consumption.</p>
+</section>
+<section class="gallery">
+  <img src="{{ url_for('static',filename='images/fruits1.jpg') }}">
+  <img src="{{ url_for('static',filename='images/fruits2.jpg') }}">
+</section>
+{% endblock %}
