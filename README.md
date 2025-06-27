@@ -20,6 +20,13 @@ Smart Sorting is an innovative project focused on enhancing the precision and ef
 ## 📂 Project Structure
 
 here is the drive link for dataset and other files: https://drive.google.com/drive/folders/1LWbySgVZaeVTV-6f_R3gfQqGkXKoHDu2?usp=sharing
+
+
+
+
+
+
+
 SmartSorting/
 ├── app.py
 ├── trainmodel.py
