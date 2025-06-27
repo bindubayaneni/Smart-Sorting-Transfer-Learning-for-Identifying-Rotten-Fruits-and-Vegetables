@@ -1,0 +1,395 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.background-blur {
+    background: url("/Users/vinay/smart_sorting/model/Fruit And Vegetable Diseases Dataset.h5") no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(10px) brightness(0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00ffcc;
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.home-content {
+    max-width: 700px;
+    margin: auto;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.home-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background: #00ffcc;
+    color: #000;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #00cc99;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: slideInUp 1.2s ease-out;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+.card input,
+.card button {
+    padding: 10px;
+    margin: 10px;
+}
+
+.card button {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.result img {
+    margin-top: 20px;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.info ul {
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    list-style: disc;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fefefe;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background: #222;
+    padding: 10px 40px;
+}
+
+header .logo {
+    height: 40px;
+    margin-right: 20px;
+}
+
+nav a {
+    margin-right: 20px;
+    color: #eee;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color .3s;
+}
+
+nav a:hover {
+    color: #4caf50;
+}
+
+main {
+    padding: 20px;
+}
+
+.hero {
+    padding: 60px;
+    text-align: center;
+    animation: fadeIn 1.5s;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery img {
+    width: 300px;
+    border-radius: 12px;
+    transition: transform .3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.predict-card,
+.signin-card {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: slideUp .8s;
+}
+
+.predict-card h2,
+.signin-card h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.predict-card form input[type=file],
+.signin-card form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.predict-card form button,
+.signin-card form button {
+    background: #4caf50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.predict-card form button:hover,
+.signin-card form button:hover {
+    background: #45a049;
+}
+
+.predict-card .prediction {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.predict-card .prediction img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.prediction h3 {
+    color: #222;
+}
+
+.flash-wrap {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.flash {
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.flash.success {
+    background: #4caf50;
+    color: white;
+}
+
+/* General */
+h2 {
+    color: #333;
+}
+
+ul {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    min-height: 120px;
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: #aaa;
+}
+
+footer a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Make the body and html take full height */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wrapper to push the footer to the bottom */
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Footer styling */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: auto;
+    /* Push footer to the bottom */
+    width: 100%;
+}
